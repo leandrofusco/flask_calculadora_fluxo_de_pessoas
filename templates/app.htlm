@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Calculadora do Fluxo de Pessoas</h3>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <label for="Number One">Economicamente Ativa</label>
+        <input
+          type="text"
+          placeholder="Economicamente Ativa"
+          class="u-full-width"
+          name="ativa"
+        />
+
+        <label for="Number Two">Empregada</label>
+        <input
+          type="text"
+          placeholder="Empregada"
+          class="u-full-width"
+          name="empregada"
+        />
+
+        <label for="Number Two">Estudante</label>
+        <input
+          type="text"
+          placeholder="Estudante"
+          class="u-full-width"
+          name="estudante"
+        />
+        <label for="Number Two">Crianças</label>
+        <input
+          type="text"
+          placeholder="Crianças"
+          class="u-full-width"
+          name="crianca"
+        />
+        <label for="Number Two">Adultos</label>
+        <input
+          type="text"
+          placeholder="Adultos"
+          class="u-full-width"
+          name="adulto"
+        />
+        <label for="Number Two">Idosos</label>
+        <input
+          type="text"
+          placeholder="Idosos"
+          class="u-full-width"
+          name="idoso"
+        />
+
+
+        <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          <table>
+            <div>
+              <h6>Valor do Fluxo de pessoas</h6> 
+            </tr>{{ sum }}<tr>
+            </div>
+             <div>
+              <h6>Valor do Fluxo de pessoas na escola</h6> 
+              <tr>{{escola}}</tr>
+             </div> 
+             <div>
+              <h6>Valor do Fluxo de pessoas na faculdade</h6>
+              <tr>{{faculdade}}</tr>
+             </div>
+             <div>
+              <h6>Número de escolas</h6>
+              <tr>{{numero_escola}}</tr>
+             </div>
+             <div>
+              <h6>Número de faculdades</h6>
+              <tr>{{numero_faculdade}}</tr>
+             </div>
+             <div>
+              <h6>Fluxo real nas escolas</h6>
+              <tr>{{fluxo_real_escola}}</tr>
+             </div>
+             <div>
+              <h6>Fluxo real nas faculdades</h6>
+              <tr>{{fluxo_real_faculdade}}</tr>
+             </div>
+             <div>
+              <h6>Fluxo real total</h6>
+              <tr>{{fluxo_total}}</tr>
+             </div>
+          </table>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
